@@ -2,7 +2,7 @@
 export const analyticsConfig = {
   // Facebook Pixel Configuration
   facebook: {
-    pixelId: '1438523030705133',
+    pixelId: process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || '',
     // Add your Facebook Pixel ID here or set it as an environment variable
     // You can get this from Facebook Ads Manager > Events Manager > Data Sources
   },
