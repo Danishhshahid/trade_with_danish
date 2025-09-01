@@ -28,6 +28,23 @@ export const analyticsConfig = {
   },
 }
 
+// Fallback configuration for build-time safety
+export const getAnalyticsConfig = () => {
+  if (typeof window === 'undefined') {
+    // Server-side fallback
+    return {
+      facebook: {
+        pixelId: process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || 'YOUR_PIXEL_ID_HERE',
+      },
+      google: {
+        measurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || '',
+      },
+    }
+  }
+  
+  return analyticsConfig
+}
+
 // Environment Variables to add to your .env.local file:
 // NEXT_PUBLIC_FACEBOOK_PIXEL_ID=123456789012345
 // NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
