@@ -32,40 +32,47 @@ export const trackStandardEvent = (eventName: string, parameters: Record<string,
 
 // Specific tracking functions for your use case
 export const trackTelegramJoin = (source?: string, location?: string) => {
-  event('JoinTelegramClicked', {
-    action: 'telegram_cta_clicked',
-    channel: 'telegram',
-    source: source || 'unknown',
-    location: location || 'unknown',
-    value: 1,
-    currency: 'USD',
-  });
-  
-  // Also track as a Lead event for better ad optimization
-  trackStandardEvent('Lead', {
-    content_name: 'Telegram Join',
-    content_category: 'Social Media',
-    value: 1,
-    currency: 'USD',
-    source: source || 'unknown',
-    location: location || 'unknown',
-  });
+  if (typeof window !== 'undefined' && window.fbq) {
+    // Track custom event
+    window.fbq('trackCustom', 'JoinTelegramClicked', {
+      action: 'telegram_cta_clicked',
+      channel: 'telegram',
+      source: source || 'unknown',
+      location: location || 'unknown',
+      value: 1,
+      currency: 'USD',
+    });
+    
+    // Also track as a Lead event for better ad optimization
+    window.fbq('track', 'Lead', {
+      content_name: 'Telegram Join',
+      content_category: 'Social Media',
+      value: 1,
+      currency: 'USD',
+      source: source || 'unknown',
+      location: location || 'unknown',
+    });
+  }
 };
 
 export const trackButtonClick = (buttonName: string, location?: string) => {
-  event('ButtonClick', {
-    button_name: buttonName,
-    location: location || 'unknown',
-    value: 1,
-  });
+  if (typeof window !== 'undefined' && window.fbq) {
+    window.fbq('trackCustom', 'ButtonClick', {
+      button_name: buttonName,
+      location: location || 'unknown',
+      value: 1,
+    });
+  }
 };
 
 export const trackEngagement = (engagementType: string, contentName?: string) => {
-  event('Engagement', {
-    engagement_type: engagementType,
-    content_name: contentName || 'unknown',
-    value: 1,
-  });
+  if (typeof window !== 'undefined' && window.fbq) {
+    window.fbq('trackCustom', 'Engagement', {
+      engagement_type: engagementType,
+      content_name: contentName || 'unknown',
+      value: 1,
+    });
+  }
 };
 
 // Check if Pixel is loaded

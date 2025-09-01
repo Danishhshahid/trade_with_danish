@@ -2,15 +2,16 @@
 
 import { useEffect } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
-import { pageview } from '@/lib/fpixel'
 
 const PixelTracker = () => {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
   useEffect(() => {
-    // Track page view on route change
-    pageview()
+    // Track page view on route change using the hardcoded pixel
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'PageView')
+    }
   }, [pathname, searchParams])
 
   return null

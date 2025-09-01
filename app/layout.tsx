@@ -1,9 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import FacebookPixel from '@/components/FacebookPixel'
 import PixelTracker from '@/components/PixelTracker'
-import { analyticsConfig } from '@/config/analytics'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -112,7 +110,6 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <FacebookPixel pixelId={analyticsConfig.facebook.pixelId} />
         <PixelTracker />
         {children}
       </body>
