@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from 'next'
+import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import FacebookPixel from '@/components/FacebookPixel'
@@ -53,14 +53,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://forexsignals.com',
   },
+  viewport: 'width=device-width, initial-scale=1',
+  themeColor: '#1e40af',
 }
-
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-}
-
-export const themeColor = '#1e40af'
 
 export default function RootLayout({
   children,
