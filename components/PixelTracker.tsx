@@ -8,10 +8,17 @@ const PixelTracker = () => {
   const searchParams = useSearchParams()
 
   useEffect(() => {
-    // Track page view on route change using the hardcoded pixel
-    if (typeof window !== 'undefined' && window.fbq) {
-      window.fbq('track', 'PageView')
-    }
+    // Add delay to ensure pixel is loaded
+    const timer = setTimeout(() => {
+      if (typeof window !== 'undefined' && window.fbq) {
+        console.log('PixelTracker: Pixel loaded, tracking PageView')
+        window.fbq('track', 'PageView')
+      } else {
+        console.error('PixelTracker: Pixel not loaded after delay')
+      }
+    }, 1000)
+
+    return () => clearTimeout(timer)
   }, [pathname, searchParams])
 
   return null

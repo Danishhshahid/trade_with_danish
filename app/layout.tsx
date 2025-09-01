@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Script from 'next/script'
 import PixelTracker from '@/components/PixelTracker'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -65,7 +66,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Meta Pixel Code */}
-        <script
+        <Script
+          id="fb-pixel"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               !function(f,b,e,v,n,t,s)
