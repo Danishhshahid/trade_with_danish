@@ -2,6 +2,7 @@
 
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
+import { trackTelegramJoin, trackButtonClick } from '@/lib/fpixel'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -90,6 +91,10 @@ export default function Header() {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block mx-4 w-auto btn-secondary text-center cursor-pointer"
+                onClick={() => {
+                  trackTelegramJoin('Header Mobile')
+                  trackButtonClick('Join Telegram', 'Header Mobile')
+                }}
               >
                 Join Free
               </a>

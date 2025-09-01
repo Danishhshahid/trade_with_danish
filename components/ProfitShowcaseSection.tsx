@@ -11,6 +11,7 @@ import photo6 from "@/public/assets/analysis2.jpg"
 import photo7 from "@/public/assets/analysis3.jpg"
 import photo8 from "@/public/assets/analysis4.jpg"
 import Image from 'next/image'
+import { trackTelegramJoin, trackButtonClick } from '@/lib/fpixel'
 
 export default function ProfitShowcaseSection() {
   const [activeTab, setActiveTab] = useState('profits')
@@ -325,6 +326,10 @@ export default function ProfitShowcaseSection() {
               target="_blank" 
               rel="noopener noreferrer"
               className="btn-primary text-lg px-8 py-4 inline-block"
+              onClick={() => {
+                trackTelegramJoin('Profit Showcase')
+                trackButtonClick('Join Telegram', 'Profit Showcase')
+              }}
             >
               Join Telegram Channel
             </a>

@@ -1,6 +1,7 @@
 'use client'
 
 import { MessageCircle, Users, TrendingUp, Star, ArrowRight } from 'lucide-react'
+import { trackTelegramJoin, trackButtonClick } from '@/lib/fpixel'
 
 export default function SocialProofSection() {
   const joinCount = 2347
@@ -131,6 +132,10 @@ export default function SocialProofSection() {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn-secondary text-lg px-8 py-4 inline-block"
+                onClick={() => {
+                  trackTelegramJoin('Social Proof')
+                  trackButtonClick('Join Telegram', 'Social Proof')
+                }}
               >
                 View Live Channel
                 <ArrowRight size={20} className="ml-2" />

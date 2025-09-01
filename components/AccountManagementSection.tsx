@@ -1,6 +1,7 @@
 'use client'
 
 import { Shield, BarChart3, Users, MessageCircle, TrendingUp, DollarSign } from 'lucide-react'
+import { trackTelegramJoin, trackButtonClick } from '@/lib/fpixel'
 
 export default function AccountManagementSection() {
   return (
@@ -89,6 +90,10 @@ export default function AccountManagementSection() {
               target="_blank" 
               rel="noopener noreferrer"
               className="btn-primary text-xl px-12 py-5 group inline-block"
+              onClick={() => {
+                trackTelegramJoin('Account Management')
+                trackButtonClick('Join Telegram', 'Account Management')
+              }}
             >
               <MessageCircle size={24} className="mr-3 group-hover:scale-110 transition-transform" />
               Message Me About Account Management

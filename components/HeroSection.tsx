@@ -2,6 +2,7 @@
 
 import { ArrowRight, CheckCircle, TrendingUp, Users, Clock } from 'lucide-react'
 import { useState, useEffect } from 'react'
+import { trackTelegramJoin, trackButtonClick } from '@/lib/fpixel'
 
 export default function HeroSection() {
   const [timeLeft, setTimeLeft] = useState({
@@ -79,6 +80,10 @@ export default function HeroSection() {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn-primary text-xl px-12 py-5 group inline-block text-center"
+                onClick={() => {
+                  trackTelegramJoin('Hero Section')
+                  trackButtonClick('Join Telegram', 'Hero Section')
+                }}
               >
                 <span className="mr-3">🚀</span>
                 JOIN FREE TELEGRAM NOW

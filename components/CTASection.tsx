@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { ArrowRight, Clock, CheckCircle, AlertTriangle } from 'lucide-react'
-import { trackTelegramJoin, trackButtonClick } from './FacebookPixel'
+import { trackTelegramJoin, trackButtonClick } from '@/lib/fpixel'
 
 export default function CTASection() {
   const [timeLeft, setTimeLeft] = useState({

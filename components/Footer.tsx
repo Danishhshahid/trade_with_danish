@@ -2,7 +2,7 @@
 
 import { TrendingUp, MessageCircle, Mail, Phone, MapPin } from 'lucide-react'
 import { FaTelegram } from "react-icons/fa";
-import { trackTelegramJoin, trackButtonClick } from './FacebookPixel'
+import { trackTelegramJoin, trackButtonClick } from '@/lib/fpixel'
 
 
 export default function Footer() {
