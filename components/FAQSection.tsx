@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import { trackTelegramJoin, trackButtonClick } from '@/lib/fpixel'
+
 import { ChevronDown, AlertTriangle, Shield, CheckCircle } from 'lucide-react'
 
 export default function FAQSection() {
@@ -128,6 +130,22 @@ export default function FAQSection() {
               All signals and performance metrics are fully trackable and verifiable.
             </p>
           </div>
+          <div className="flex flex-col sm:flex-row gap-4">
+              <a 
+                href="https://t.me/Trade_with_Danish4x" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-primary text-xl px-12 py-5 group inline-block text-center"
+                onClick={() => {
+                  trackTelegramJoin('Hero Section')
+                  trackButtonClick('Join Telegram', 'Hero Section')
+                }}
+              >
+                <span className="mr-3">🚀</span>
+                JOIN FREE TELEGRAM NOW
+                <span className="ml-3 group-hover:translate-x-1 transition-transform">→</span>
+              </a>
+            </div>
 
           <div className="text-center">
             <div className="w-16 h-16 bg-profit rounded-full flex items-center justify-center mx-auto mb-4">

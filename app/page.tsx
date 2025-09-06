@@ -20,15 +20,15 @@ export default function Home() {
       
       <div>
         <HeroSection />
-        <PainAgitationSection />
-        <SocialProofSection />
         <ProfitShowcaseSection />
-        <SolutionSection />
-        <FeaturesSection />
         <TestimonialsSection />
         <AccountManagementSection />
+        <PainAgitationSection />
+        {/* <SocialProofSection /> */}
+        {/* <SolutionSection /> */}
+        <FeaturesSection />
+        {/* <CTASection /> */}
         <FAQSection />
-        <CTASection />
       </div>
       
       <Footer />

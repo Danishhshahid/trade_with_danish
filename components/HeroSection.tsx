@@ -37,39 +37,39 @@ export default function HeroSection() {
             {/* Badge */}
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-custom rounded-full px-4 py-2 border border-white/20">
               <TrendingUp size={16} className="text-wealth" />
-              <span className="text-sm font-medium">🔥 50K+ Active Traders</span>
+              <span className="text-sm font-medium">🔥 Trading Community</span>
             </div>
 
             {/* Main Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Turn{' '}
-              <span className="text-wealth">$100</span>
-              {' '}into{' '}
-              <span className="text-profit">$1,000+</span>
-              {' '}with{' '}
-              <span className="text-wealth">FREE</span>
-              {' '}Daily Forex Signals
-            </h1>
+                Grow Your{' '}
+                <span className="text-wealth">Trading Capital</span>
+                {' '}with{' '}
+                <span className="text-profit">Professional</span>
+                {' '}Forex Signals and{' '}
+                <span className="text-wealth">PREMIUM</span>
+                {' '}Market Intelligence
+              </h1>
 
             {/* Subheadline */}
             <p className="text-xl text-gray-200 leading-relaxed">
-              Join <span className="text-profit font-semibold">50K+ traders</span> nailing{' '}
-              <span className="text-wealth font-semibold">85%+ wins</span>. No experience needed!
+              Join our <span className="text-profit font-semibold">signals community</span> focused on{' '}
+              <span className="text-wealth font-semibold">potential profit opportunities</span>. Professional analysis for serious traders!
             </p>
 
             {/* Trust Indicators */}
             <div className="flex flex-wrap items-center gap-4 text-sm">
               <div className="flex items-center space-x-2">
                 <CheckCircle size={16} className="text-profit" />
-                <span>50K Members</span>
+                <span>Active Community</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle size={16} className="text-profit" />
-                <span>85% Win Rate</span>
+                <span>Daily Signals</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle size={16} className="text-profit" />
-                <span>Totally Free</span>
+                <span>No Cost to Join</span>
               </div>
             </div>
 
@@ -86,7 +86,7 @@ export default function HeroSection() {
                 }}
               >
                 <span className="mr-3">🚀</span>
-                JOIN FREE TELEGRAM NOW
+                JOIN SIGNALS COMMUNITY
                 <span className="ml-3 group-hover:translate-x-1 transition-transform">→</span>
               </a>
               <button className="btn-secondary text-lg px-8 py-4">
@@ -101,7 +101,7 @@ export default function HeroSection() {
             <div className="bg-white/10 backdrop-blur-custom rounded-2xl p-6 border border-white/20">
               <div className="text-center mb-4">
                 <Clock size={24} className="text-wealth mx-auto mb-2" />
-                <p className="text-sm text-gray-300">Limited Time Offer</p>
+                <p className="text-sm text-gray-300">Limited Access Period</p>
               </div>
               <div className="grid grid-cols-3 gap-4">
                 <div className="text-center">
@@ -123,23 +123,25 @@ export default function HeroSection() {
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white/10 backdrop-blur-custom rounded-xl p-4 text-center border border-white/20">
                 <Users size={24} className="text-profit mx-auto mb-2" />
-                <div className="text-2xl font-bold">50K+</div>
-                <div className="text-sm text-gray-300">Active Members</div>
+                <div className="text-2xl font-bold">Active</div>
+                <div className="text-sm text-gray-300">Members</div>
               </div>
               <div className="bg-white/10 backdrop-blur-custom rounded-xl p-4 text-center border border-white/20">
                 <TrendingUp size={24} className="text-wealth mx-auto mb-2" />
-                <div className="text-2xl font-bold">85%</div>
-                <div className="text-sm text-gray-300">Win Rate</div>
+                <div className="text-2xl font-bold">Daily</div>
+                <div className="text-sm text-gray-300">Signals</div>
               </div>
             </div>
 
             {/* Success Story */}
             <div className="bg-gradient-to-r from-profit to-wealth rounded-xl p-4 text-center">
-              <div className="text-sm text-white/80 mb-1">Latest Success</div>
+              <div className="text-sm text-white/80 mb-1">Trading Potential</div>
               <div className="text-lg font-bold text-white">
-                John D. made $2,450 in 3 days
+                Turn $100 into $10,000 just with FREE signals
               </div>
-              <div className="text-sm text-white/80">using our signals</div>
+              <div className="text-sm text-gray-200">
+                *Trading involves risk. Past performance doesn't guarantee future results.
+              </div>
             </div>
           </div>
         </div>

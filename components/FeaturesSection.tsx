@@ -1,5 +1,7 @@
 'use client'
 
+import { trackTelegramJoin, trackButtonClick } from '@/lib/fpixel'
+
 import { CheckCircle, TrendingUp, BarChart3, Shield, Zap, Target } from 'lucide-react'
 
 export default function FeaturesSection() {
@@ -178,6 +180,22 @@ export default function FeaturesSection() {
                 <div className="text-3xl font-bold text-trust mb-2">$2M+</div>
                 <div className="text-sm">Profits Generated</div>
               </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+              <a 
+                href="https://t.me/Trade_with_Danish4x" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-primary text-xl px-12 py-5 group inline-block text-center"
+                onClick={() => {
+                  trackTelegramJoin('Hero Section')
+                  trackButtonClick('Join Telegram', 'Hero Section')
+                }}
+              >
+                <span className="mr-3">🚀</span>
+                JOIN FREE TELEGRAM NOW
+                <span className="ml-3 group-hover:translate-x-1 transition-transform">→</span>
+              </a>
+            </div>
             </div>
           </div>
         </div>
