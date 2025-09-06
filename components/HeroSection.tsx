@@ -137,7 +137,7 @@ export default function HeroSection() {
             <div className="bg-gradient-to-r from-profit to-wealth rounded-xl p-4 text-center">
               <div className="text-sm text-white/80 mb-1">Trading Potential</div>
               <div className="text-lg font-bold text-white">
-                Turn $100 into $10,000 just with FREE signals
+                Turn $100 into $10,000 just with FREE
               </div>
               <div className="text-sm text-gray-200">
                 *Trading involves risk. Past performance doesn't guarantee future results.

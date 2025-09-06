@@ -47,12 +47,18 @@ export default function Header() {
             >
               FAQ
             </button>
-            <button 
-              onClick={() => scrollToSection('cta')}
+            <a 
+              href="https://t.me/Trade_with_Danish4x" 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="btn-secondary cursor-pointer"
+              onClick={() => {
+                trackTelegramJoin('Header Desktop')
+                trackButtonClick('Join Telegram', 'Header Desktop')
+              }}
             >
               Join Free
-            </button>
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
