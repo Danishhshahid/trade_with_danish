@@ -24,7 +24,7 @@ export default function Header() {
             <div className="w-8 h-8 bg-gradient-to-r from-profit to-trust rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">F</span>
             </div>
-            <span className="text-xl font-bold text-dark">ForexWith<span className="text-profit">Danish</span></span>
+            <span className="text-xl font-bold text-dark">ForexWith<span className="text-profit">James</span></span>
           </div>
 
           {/* Desktop Navigation */}

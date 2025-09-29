@@ -17,7 +17,7 @@ export default function Footer() {
                  <TrendingUp size={24} className="text-white" />
                </div>
                <div>
-                 <div className="text-2xl font-bold">Forex With Danish</div>
+                 <div className="text-2xl font-bold">Forex With James</div>
                  <div className="text-gray-400">Professional Trading Signals</div>
                </div>
              </div>
@@ -58,7 +58,7 @@ export default function Footer() {
         <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="grid md:grid-cols-2 gap-4 items-center">
             <div className="text-gray-400 text-sm">
-              © 2024 Forex With Danish. All rights reserved.
+              © 2024 Forex With James. All rights reserved.
             </div>
             <div className="flex flex-wrap gap-4 text-sm">
               <a href="/terms" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
